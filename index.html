@@ -6,38 +6,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My School</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error {
+          color: red;
+        }
+      </style>
+
+<style>
+    #profile {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #sekolah {
+      background-image: url('assets/sekolah.jpg');
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      color: white;
+      padding-top: 100px; 
+    }
+    .section {
+      padding: 20px;
+      margin: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+  </style>
+
+
+
 </head>
 <body>
+
+    
     <nav>
-        <img src="" alt="Logo" class="logo">
+        <img src="assets/logo.png" alt="Logo" class="logo">
         <ul class="nav-items">
-            <li>Home</li>
-            <li>Our Profile</li>
-            <li>Achievement</li>
-            <li>Message Us</li>
+            <button>Home</button>
+           <button> <a href="#profile"></a> Our Profile</button>
+            <button>Achievement</button>
+            <button>Message Us</button>
         </ul>
     </nav>
 
     <header>
-        <h1>Hi Ilham, Welcome To My Website</h1>
-        <h4>Ini adalah project pertama saya</h4>
+        <script src="js/script.js"></script>
+        <h1>Hi <span id="name">-</span> Welcome to my website</h1>
+        <p>Ini adalah project pertama</p>
+       
+        <form name="message-form" onsubmit="return validateForm()">
+        <input required type="text" placeholder="nama anda" id="name-input" name="name-input">
+        <button id="submit" type="submit">kirim</button>
+        <p id="error-name"></p>
+        </form>
+
         <img src="assets/header.png" alt="">
         <hr>
     </header>
 
-    <div class="facilitations">
-        <div>
-            <div class="circle" style="background-image: url('assets/header.png');"></div>
-            <h4>Football Arena</h4>
-        </div>
-        <div>
-            <div class="circle"></div>
-            <h4>Auditorium</h4>
-        </div>
-        <div>
-            <div class="circle"></div>
-            <h4>Student Canteen</h4>
-        </div>
+    <div id="profile">
+        <h2>My Profile</h2>
+        <p>Nama: Ilham Ramadhani</p>
+        <p>Umur: 18</p>
+        <p>Status: Pelajar</p>
+        <p>Keterangan: Saya Ilham Ramadhani siswa dari SMK Negeri 1 Kemang Bogor dengan jurusan teknik jaringan komputer dan telekomunikasi (TJKT)</p>
+ 
+      </div>
+
+<hr>
+
+<header id="sekolah">
+    <h1>Selamat datang di sekolah smkn 1 kemang bogor</h1>
+  </header>
+
+  <section class="section">
+    <h2>Tentang sekolah</h2>
+    <p>SMK Negeri 1 Kemang telah berdiri pada tahun pelajaran 2016/2017. Pada awal mula tempat kegiatan belajar mengajar masih menggunakan secara bersama dengan unit SMP Negeri 2 Kemang kurang lebih selama 1 tahun pelajaran. Kepala sekolah SMK Negeri 1 Kemang pada saat itu belum ada yang definitif, Dinas Penidikan Kabupaten Bogor menunjuk pejabat Kepala Sekolah yang dijabat Plt Kepala Sekolah Bapak Drs. Heri Syahriban. M.Pd dan dibantu oleh Plh Kepala Sekolah dijabat oelh Ibu Hj. Meisye Yeti, S.Si, MT. Pada saat ini SMK Negeri 1 Kemang Kabupaten Bogor sudah menempati bangunan sendiri yang berlokasi di Jalan Kemang Limus Manggung RT 004 RW 002 Dusun I Desa Kemang Kecamatan Kemang Kabupaten Bogor dengan luas  + 3,01 hektar.
+
+        Jumlah Pendidik dan Tenaga Kependidikan yang dimiliki saat itu 14 orang guru dan 3 orang Tendik. 1 orang berstatus ASN ( hanya Kepala Sekolah ) dan sisanya 16 orang tenaga honorer komite. Kepala sekolah dibantu oleh Komite yang dibentuk pada saat awal pertemuan dengan orangtua/wali murid tahun pelajaran 2016/2017, dengan ketua Komite Bapak Entang Suana, SE, yang bersangkutan menjabat sebagai Kepala Desa Kemang.
+        
+        
+        Peran Komite pada saat itu memberikan sumbangsih yang sangat siginifikan, khususnya untuk operasional kegiatan sekolah, karena pada saat itu belum ada guru yang diberikan  honor dari Dinas Pendidikan Kabupaten Bogor maupun Dinas Pendidikan Provinsi Jawa Barat. Untuk menunjang Kegiatan operasional sekolah dan kegiatan pembinaan kesiswaan, masih sangat bergantung kepada bantuan orangtua/wali murid yang dikelola oleh Pengurus Komite Sekolah.</p>
+  </section>
+
+  <section class="section">
+    <h2>Visi & Misi</h2>
+    <p><h3><b>Visi</b></h3>
+        Menjadi Lembaga Pendidikan dan Pelatihan, serta menghasilkan lulusan yang amanah, produktif, mampu bersaing secara Nasional dan Internasional yang beriman dan bertaqwa.
+        <h3><b>Misi</b></h3>
+1. Menyelenggarakan pembelajaran yang inovatif dan kreatif sesuai dengan tuntutan era global. <br>
+2. Melaksanakan pengamalan ajaran agama yang dianutnya. <br>
+3. Mengembangkan sistem pembelajaran dan manajemen berbasis teknologi informasi. <br>
+4. Menjalin kemitraan dan kerjasama antar sekolah maupun DU/DI baik dengan skala Nasional maupun Internasional.
+    </p>
+  </section>
+
+  <h2 id="jurusan">Jurusan SMK Negeri 1 Kemang</h2>
+  <div class="facilitations">
+    <div>
+        <div class="circle" style="background-image: url('assets/tkj.png');"></div>
+        <h4>Teknik Komputer dan Jaringan </h4>
     </div>
+    <div>
+        <div class="circle" style="background-image: url('assets/tbo.png');"></div>
+        <h4>Teknik Bodi Otomotif </h4>
+    </div>
+    <div>
+        <div class="circle" style="background-image: url('assets/kcs.jpg');"></div>
+        <h4>Kecantikan & Spa</h4>
+    </div>
+</div>
+
+   
+
+    <form id="messageForm" onsubmit="handleSubmit(event)">
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name"><br>
+        
+        <label for="dob">Tanggal Lahir:</label><br>
+        <input type="date" id="dob" name="dob"><br>
+        
+        <label for="gender">Jenis Kelamin:</label><br>
+        <input type="radio" id="male" name="gender" value="Laki-laki">
+        <label for="male">Laki-laki</label>
+        <input type="radio" id="female" name="gender" value="Perempuan">
+        <label for="female">Perempuan</label><br>
+        
+        <label for="message">Pesan:</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        
+        <input type="submit" value="Kirim">
+      </form>
+    
+      <div id="displayValues"></div>
+    
+      <script>
+        function handleSubmit(event) {
+          event.preventDefault(); 
+    
+          
+          const name = document.getElementById('name').value;
+          const dob = document.getElementById('dob').value;
+          const gender = document.querySelector('input[name="gender"]:checked');
+          const message = document.getElementById('message').value;
+    
+          
+          if (name === '' || dob === '' || gender === null || message === '') {
+            alert('Silakan isi semua bidang');
+            return;
+          }
+    
+        
+          const displayDiv = document.getElementById('displayValues');
+          displayDiv.innerHTML = `
+            <h2>Nilai yang Dikirim:</h2>
+            <p><strong>Nama:</strong> ${name}</p>
+            <p><strong>Tanggal Lahir:</strong> ${dob}</p>
+            <p><strong>Jenis Kelamin:</strong> ${gender.value}</p>
+            <p><strong>Pesan:</strong> ${message}</p>
+          `;
+        }
+      </script>
+
+      <p>Maaf kak untuk hasil output nama masih ada trouble, jadi maaf apabila hasil output nya undefined...</p>
 </body>
 </html>
